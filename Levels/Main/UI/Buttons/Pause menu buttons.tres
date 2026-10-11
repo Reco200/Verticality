@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://c706yjnu8svsh"]
+
+[ext_resource type="StyleBox" uid="uid://cyuwrxusjc4g2" path="res://Levels/Main/UI/style box.tres" id="1_7oav2"]
+[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="2_fnkxj"]
+
+[resource]
+default_font = ExtResource("2_fnkxj")
+default_font_size = 100
+Button/colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+Button/colors/font_hover_color = Color(0, 0.7529412, 0.8745098, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0.7529412, 0.8745098, 1)
+RichTextLabel/font_sizes/normal_font_size = 64
+RichTextLabel/styles/background = ExtResource("1_7oav2")
+RichTextLabel/styles/fill = ExtResource("1_7oav2")
+RichTextLabel/styles/focus = ExtResource("1_7oav2")
+RichTextLabel/styles/normal = ExtResource("1_7oav2")

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://bxj7iybi52hpp"]
+
+[ext_resource type="Theme" uid="uid://dw5bwwpc4xns3" path="res://Levels/Main/UI/theme.tres" id="1_1ouw8"]
+[ext_resource type="PackedScene" uid="uid://v4e8po5651e6" path="res://Levels/Main/UI/Buttons/button.tscn" id="2_lm660"]
+[ext_resource type="Script" uid="uid://brlxodupe1mkl" path="res://Levels/Main/UI/Buttons/homebutton.gd" id="3_03tjb"]
+[ext_resource type="FontFile" uid="uid://qnhon4ejlo5r" path="res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf" id="4_1ouw8"]
+[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="4_03tjb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 36.0
+content_margin_top = 32.0
+content_margin_right = 36.0
+content_margin_bottom = 32.0
+bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[sub_resource type="Theme" id="Theme_oi2ig"]
+default_font = ExtResource("4_1ouw8")
+default_font_size = 0
+
+[node name="Control2" type="Control" unique_id=902198821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1ouw8")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=855645012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2066658341]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Title Container" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=387988362]
+layout_mode = 2
+theme_override_constants/margin_left = 104
+theme_override_constants/margin_top = -3
+
+[node name="TITLE" type="RichTextLabel" parent="PanelContainer/VBoxContainer/Title Container" unique_id=1820779524]
+layout_mode = 2
+theme = SubResource("Theme_oi2ig")
+theme_type_variation = &"RichtextLabeltitle"
+theme_override_colors/default_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[wave]  How to Play"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=777664667]
+layout_mode = 2
+theme_override_constants/margin_left = 168
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 0
+
+[node name="How to play" type="RichTextLabel" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=326537223]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/normal_font = ExtResource("4_03tjb")
+theme_override_font_sizes/normal_font_size = 33
+bbcode_enabled = true
+text = "   This is a game about grappling    
+   to the top of the level by left   
+   clicking on floating blocks in    
+   the given level. The goal is to   
+  make it to the highest block, and  
+  make it all the way back down to   
+   the flat plane that you started   
+ on. Try to complete levels as fast  
+as you can, beating your high scores."
+fit_content = true
+autowrap_mode = 0
+
+[node name="BackContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=15705068]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = -500
+
+[node name="Back" parent="PanelContainer/VBoxContainer/BackContainer" unique_id=716562248 instance=ExtResource("2_lm660")]
+custom_minimum_size = Vector2(150, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "<"
+script = ExtResource("3_03tjb")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/BackContainer/Back" to="PanelContainer/VBoxContainer/BackContainer/Back" method="_on_pressed"]

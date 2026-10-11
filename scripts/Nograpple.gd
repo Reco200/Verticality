@@ -1,0 +1,2 @@
+class_name NoGrapple
+extends StaticBody3D

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bdupkh0grwy27"]
+
+[ext_resource type="PackedScene" uid="uid://lqyku5wn2wo0" path="res://Player/MovementController.tscn" id="1_t1jcr"]
+[ext_resource type="PackedScene" uid="uid://b8drbos167vf8" path="res://Player/Head.tscn" id="2_41iu1"]
+[ext_resource type="Script" uid="uid://dvpiy7xtc0y0n" path="res://Player/Sprint.gd" id="3_bgqcu"]
+[ext_resource type="Script" uid="uid://ddwrp5fgy56me" path="res://addons/grappling_hook_3d/src/hook_controller.gd" id="4_ddoul"]
+
+[node name="Player" unique_id=344836853 instance=ExtResource("1_t1jcr")]
+
+[node name="Head" parent="." index="1" unique_id=598620612 instance=ExtResource("2_41iu1")]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head" index="1" unique_id=1860309642]
+target_position = Vector3(0, 0, -25)
+
+[node name="Sprint" type="Node" parent="." index="2" unique_id=603428857]
+script = ExtResource("3_bgqcu")
+
+[node name="HookController" type="Node" parent="." index="3" unique_id=1471670291]
+script = ExtResource("4_ddoul")
+launch_action_name = "grapple"
+retract_action_name = "grapple_retract"
+pull_speed = 7.005
+hook_range = 150.0
+
+[editable path="Head"]

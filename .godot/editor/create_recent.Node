@@ -1,0 +1,14 @@
+MarginContainer
+MeshInstance3D
+RichTextLabel
+CollisionShape3D
+Area3D
+CanvasLayer
+ColorRect
+AnimationPlayer
+Button
+VBoxContainer
+PanelContainer
+Panel
+Control
+StaticBody3D

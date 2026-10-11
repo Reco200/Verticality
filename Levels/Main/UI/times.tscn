@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://dml6qojq6o86h"]
+
+[ext_resource type="Theme" uid="uid://dw5bwwpc4xns3" path="res://Levels/Main/UI/theme.tres" id="1_theme"]
+[ext_resource type="Script" uid="uid://bieyju38r8li8" path="res://Levels/Main/UI/times.gd" id="2_script"]
+[ext_resource type="PackedScene" uid="uid://v4e8po5651e6" path="res://Levels/Main/UI/Buttons/button.tscn" id="3_oa0q6"]
+[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="3_pxfqm"]
+[ext_resource type="Script" uid="uid://nqhvhabmp84d" path="res://Levels/Main/UI/Buttons/backtogame.gd" id="4_xbwmp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxfqm"]
+bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[node name="Times" type="Control" unique_id=441656299]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_theme")
+script = ExtResource("2_script")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1390859458]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxfqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=446393431]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1505826096]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Header" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=156350481]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Header" unique_id=112553609]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_font_sizes/font_size = 40
+text = "Logs"
+
+[node name="Back" parent="PanelContainer/MarginContainer/VBoxContainer/Header" unique_id=716562248 instance=ExtResource("3_oa0q6")]
+custom_minimum_size = Vector2(150, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "<"
+script = ExtResource("4_xbwmp")
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=823107096]
+layout_mode = 2
+
+[node name="ColumnHeaders" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1748620238]
+layout_mode = 2
+columns = 3
+
+[node name="CourseHeader" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/ColumnHeaders" unique_id=1207768370]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_font_sizes/font_size = 22
+text = "Course"
+
+[node name="DateHeader" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/ColumnHeaders" unique_id=196561692]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_font_sizes/font_size = 22
+text = "Recorded"
+
+[node name="TimeHeader" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/ColumnHeaders" unique_id=911318012]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_font_sizes/font_size = 22
+text = "Time"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=576324568]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Rows" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1413839353]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+
+[node name="Status" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1187237875]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_font_sizes/font_size = 18
+text = "No recorded course times yet."
+
+[connection signal="back_requested" from="PanelContainer/MarginContainer/VBoxContainer/Header/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Header/Back" to="PanelContainer/MarginContainer/VBoxContainer/Header/Back" method="_on_pressed"]

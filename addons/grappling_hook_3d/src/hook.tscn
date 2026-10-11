@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dlqm10204rcaq"]
+
+[ext_resource type="Script" uid="uid://din0nustn1lf3" path="res://addons/grappling_hook_3d/src/hook_model.gd" id="1_axmsb"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2uiuu"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 1.0
+radial_segments = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8746b"]
+albedo_color = Color(0.082353, 0.180392, 0.356863, 1)
+metallic = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_usc5b"]
+size = Vector3(0.07, 0.07, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nx8y"]
+albedo_color = Color(0.082353, 0.180392, 0.356863, 1)
+metallic = 1.0
+
+[node name="Hook" type="Node3D" unique_id=1595266431]
+script = ExtResource("1_axmsb")
+
+[node name="Rope" type="Node3D" parent="." unique_id=784867107]
+
+[node name="Rope Mesh" type="MeshInstance3D" parent="Rope" unique_id=1773555084]
+transform = Transform3D(0.7, 0, 0, 0, -4.371139e-08, 0.7, 0, -1, -3.059797e-08, 0, 0, -0.5)
+mesh = SubResource("CylinderMesh_2uiuu")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8746b")
+
+[node name="Hook End" type="Node3D" parent="." unique_id=36571482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Model" type="MeshInstance3D" parent="Hook End" unique_id=825957824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.125)
+mesh = SubResource("BoxMesh_usc5b")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_0nx8y")
+
+[node name="Rope Visual Target" type="Marker3D" parent="Hook End" unique_id=2061579789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25)

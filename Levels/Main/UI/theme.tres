@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://dw5bwwpc4xns3"]
+
+[ext_resource type="StyleBox" uid="uid://cyuwrxusjc4g2" path="res://Levels/Main/UI/style box.tres" id="1_g5wqy"]
+[ext_resource type="FontFile" uid="uid://xi8sw5pri0mh" path="res://IBMPlexMono-Regular.ttf" id="1_ppxs2"]
+[ext_resource type="FontFile" uid="uid://dtobq5qljc40n" path="res://Doto-Regular.ttf" id="2_ep3nk"]
+
+[resource]
+default_font = ExtResource("2_ep3nk")
+default_font_size = 64
+Button/colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+Button/colors/font_hover_color = Color(0, 0.7529412, 0.8745098, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0.7529412, 0.8745098, 1)
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1_ppxs2")
+PanelContainer/styles/panel = ExtResource("1_g5wqy")
+RichtextLabeltitle/base_type = &"RichTextLabel"
+RichtextLabeltitle/font_sizes/normal_font_size = 135

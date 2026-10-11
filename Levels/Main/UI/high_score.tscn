@@ -1,0 +1,26 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Levels/Main/UI/high_score.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="2_font"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_best_time"]
+font = ExtResource("2_font")
+font_size = 24
+font_color = Color(0, 0.7529412, 0.8745098, 1)
+outline_size = 4
+outline_color = Color(0.055, 0.105, 0.2, 1)
+
+[node name="HighScore" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="BestTime" type="Label" parent="."]
+anchors_preset = 1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -58.0
+offset_right = 330.0
+offset_bottom = -20.0
+grow_vertical = 0
+text = "BEST  --"
+label_settings = SubResource("LabelSettings_best_time")

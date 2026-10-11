@@ -1,0 +1,4 @@
+class_name GrappleHalfway
+extends StaticBody3D
+
+signal grapple_finish

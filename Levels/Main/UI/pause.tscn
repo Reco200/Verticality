@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cwiw4ulqhp68g"]
+
+[ext_resource type="Script" uid="uid://f5tw6oeeovde" path="res://Levels/Main/UI/pause_menu.gd" id="1_nrs5n"]
+[ext_resource type="Theme" uid="uid://c706yjnu8svsh" path="res://Levels/Main/UI/Buttons/Pause menu buttons.tres" id="2_nrs5n"]
+[ext_resource type="PackedScene" uid="uid://dml6qojq6o86h" path="res://Levels/Main/UI/times.tscn" id="3_times"]
+[ext_resource type="FontFile" uid="uid://qnhon4ejlo5r" path="res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf" id="4_sitlt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 26.0
+content_margin_top = 24.0
+content_margin_right = 26.0
+content_margin_bottom = 24.0
+bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncwq4"]
+content_margin_left = 20.0
+content_margin_top = 14.0
+content_margin_right = 20.0
+content_margin_bottom = 14.0
+bg_color = Color(0.08235294, 0.18039216, 0.35686275, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.1764706, 0.8980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_pressed"]
+content_margin_left = 20.0
+content_margin_top = 14.0
+content_margin_right = 20.0
+content_margin_bottom = 14.0
+bg_color = Color(0.04, 0.15, 0.28, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
+content_margin_left = 20.0
+content_margin_top = 14.0
+content_margin_right = 20.0
+content_margin_bottom = 14.0
+bg_color = Color(0.11, 0.23, 0.42, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[node name="Control" type="Control" unique_id=1692540186]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nrs5n")
+
+[node name="Times" parent="." unique_id=1437470045 instance=ExtResource("3_times")]
+visible = false
+layout_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1036778871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -220.0
+offset_right = 225.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nrs5n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=914232570]
+layout_mode = 2
+theme = ExtResource("2_nrs5n")
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1978609960]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("4_sitlt")
+theme_override_font_sizes/font_size = 38
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=461694278]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme = ExtResource("2_nrs5n")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncwq4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+text = "Resume"
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1569481387]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme = ExtResource("2_nrs5n")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncwq4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+text = "Logs"
+
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1881625600]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme = ExtResource("2_nrs5n")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncwq4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+text = "Main Menu"
+
+[connection signal="back_requested" from="Times" to="." method="_on_times_back_requested"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

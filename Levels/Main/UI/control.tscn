@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cdtfv4f042xft"]
+
+[ext_resource type="Theme" uid="uid://dw5bwwpc4xns3" path="res://Levels/Main/UI/theme.tres" id="1_yb7o8"]
+[ext_resource type="FontFile" uid="uid://qnhon4ejlo5r" path="res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf" id="2_iadhv"]
+[ext_resource type="PackedScene" uid="uid://v4e8po5651e6" path="res://Levels/Main/UI/Buttons/button.tscn" id="2_pntgy"]
+[ext_resource type="Script" uid="uid://cxt0dns1wx4uc" path="res://Levels/Main/UI/Buttons/levelselect.gd" id="3_pntgy"]
+[ext_resource type="Script" uid="uid://w6nasfwhloy5" path="res://Levels/Main/UI/Buttons/exit.gd" id="4_nulli"]
+[ext_resource type="Script" uid="uid://cpbo80or0fo2e" path="res://Levels/Main/UI/Buttons/credits.gd" id="4_rtdmk"]
+[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="7_1obja"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 36.0
+content_margin_top = 32.0
+content_margin_right = 36.0
+content_margin_bottom = 32.0
+bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[sub_resource type="Theme" id="Theme_1ouw8"]
+default_font = ExtResource("2_iadhv")
+
+[node name="Control" type="Control" unique_id=902198821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yb7o8")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=855645012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2066658341]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 14
+
+[node name="TITLE" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1265349076]
+layout_mode = 2
+theme_override_constants/margin_top = -118
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/TITLE" unique_id=1820779524]
+layout_mode = 2
+theme = SubResource("Theme_1ouw8")
+theme_type_variation = &"RichtextLabeltitle"
+theme_override_colors/default_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[wave]Verticality"
+fit_content = true
+autowrap_mode = 0
+
+[node name="LEVEL SELECT" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1423475803]
+layout_mode = 2
+
+[node name="level selection" parent="PanelContainer/VBoxContainer/LEVEL SELECT" unique_id=1913964341 instance=ExtResource("2_pntgy")]
+custom_minimum_size = Vector2(600, 82)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Level Select"
+script = ExtResource("3_pntgy")
+
+[node name="CREDITS" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1643608761]
+layout_mode = 2
+
+[node name="credits" parent="PanelContainer/VBoxContainer/CREDITS" unique_id=716562248 instance=ExtResource("2_pntgy")]
+custom_minimum_size = Vector2(600, 82)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "How to Play"
+script = ExtResource("4_rtdmk")
+
+[node name="QUIT" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1584870651]
+layout_mode = 2
+
+[node name="quit" parent="PanelContainer/VBoxContainer/QUIT" unique_id=2136985610 instance=ExtResource("2_pntgy")]
+custom_minimum_size = Vector2(600, 82)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Quit"
+script = ExtResource("4_nulli")
+
+[node name="Title" type="Label" parent="." unique_id=172755624]
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -145.0
+offset_right = -24.0
+offset_bottom = -20.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("7_1obja")
+theme_override_font_sizes/font_size = 21
+text = "Verticality  Copyright (C) 2026  Elliot Beardsley
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it
+under certain conditions; see license and third party licenses for details."
+autowrap_mode = 3
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" to="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/CREDITS/credits" to="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" method="_on_credits_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/CREDITS/credits" to="PanelContainer/VBoxContainer/CREDITS/credits" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/QUIT/quit" to="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/QUIT/quit" to="PanelContainer/VBoxContainer/QUIT/quit" method="_on_pressed"]

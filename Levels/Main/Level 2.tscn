@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://dnjuyus4liplr"]
+
+[ext_resource type="Script" uid="uid://1ryhjik5vack" path="res://Levels/Main/L_Main.gd" id="1_xcfun"]
+[ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="2_f5lnk"]
+[ext_resource type="Script" uid="uid://dktwb344bc3wu" path="res://scripts/grapple_halfway.gd" id="4_5mcvg"]
+[ext_resource type="Script" uid="uid://b6vrajsej73yf" path="res://scripts/grapple_finish.gd" id="5_f5lnk"]
+[ext_resource type="Texture2D" uid="uid://dnf4gjtaakise" path="res://textures/cool texture.png" id="6_f5lnk"]
+[ext_resource type="PackedScene" uid="uid://cwiw4ulqhp68g" path="res://Levels/Main/UI/pause.tscn" id="6_xcfun"]
+[ext_resource type="PackedScene" path="res://Levels/Main/UI/high_score.tscn" id="7_high_score"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6b32a"]
+sky_top_color = Color(0.24138969, 0.45822746, 0.7018054, 1)
+sky_curve = 0.05404749
+ground_bottom_color = Color(0, 0, 0.3372549, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sun_curve = 0.27037555
+
+[sub_resource type="Sky" id="Sky_t5ash"]
+sky_material = SubResource("ProceduralSkyMaterial_6b32a")
+
+[sub_resource type="Environment" id="Environment_xcfun"]
+background_mode = 2
+background_color = Color(0, 0.16078432, 1, 1)
+sky = SubResource("Sky_t5ash")
+sky_rotation = Vector3(-6.2831855, -6.2831855, 0)
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.9
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_f5lnk"]
+font_size = 20
+font_color = Color(0, 0.7529412, 0.8745098, 1)
+outline_size = 10
+outline_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucjps"]
+albedo_color = Color(0.0627451, 0.11372549, 0.20392157, 1)
+metallic = 1.0
+roughness = 0.6
+uv1_scale = Vector3(0, 0, 1)
+uv2_scale = Vector3(0, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5mcvg"]
+material = SubResource("StandardMaterial3D_ucjps")
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ck7ef"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5lnk"]
+albedo_texture = ExtResource("6_f5lnk")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kl51u"]
+material = SubResource("StandardMaterial3D_f5lnk")
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8cvfd"]
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f5lnk"]
+size = Vector3(600, 10, 600)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl51u"]
+size = Vector3(600, 10, 600)
+
+[node name="Level 2" type="Node3D" unique_id=942603412]
+script = ExtResource("1_xcfun")
+
+[node name="Player" parent="." unique_id=344836853 instance=ExtResource("2_f5lnk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225.73882, 15.904434, 7.7211456)
+
+[node name="Head" parent="Player" index="1" unique_id=598620612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6399994, 0)
+
+[node name="Lighting" type="Node" parent="." unique_id=1146825392]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting" unique_id=283612822]
+environment = SubResource("Environment_xcfun")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=1231789342]
+transform = Transform3D(-0.8660253, -0.4330129, 0.2500001, 0, 0.49999994, 0.86602545, -0.50000024, 0.74999994, -0.43301257, 21.62854, 2497.8403, -88.58176)
+light_indirect_energy = 0.0
+shadow_enabled = true
+shadow_bias = 0.46
+directional_shadow_max_distance = 8192.0
+
+[node name="crosshair" type="CanvasLayer" parent="." unique_id=1583498742]
+
+[node name="Label" type="Label" parent="crosshair" unique_id=1375896458]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 5.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "⊕"
+label_settings = SubResource("LabelSettings_f5lnk")
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=597686288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.20401, -0.9000778, 8.100357)
+script = ExtResource("5_f5lnk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=1793735800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.350006, 0, -40.788)
+mesh = SubResource("BoxMesh_5mcvg")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=1233230054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.350006, 0, -40.788)
+shape = SubResource("BoxShape3D_ck7ef")
+
+[node name="HighScore" parent="." unique_id=1599733306 instance=ExtResource("7_high_score")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1242767759]
+
+[node name="Control" parent="CanvasLayer" unique_id=1692540186 instance=ExtResource("6_xcfun")]
+
+[node name="Grapple Boxes" type="StaticBody3D" parent="." unique_id=1458061545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes" unique_id=906820374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.623848, 0)
+mesh = SubResource("BoxMesh_kl51u")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes" unique_id=342549094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.605072, 0)
+shape = SubResource("BoxShape3D_8cvfd")
+
+[node name="Grapple Boxes5" type="StaticBody3D" parent="." unique_id=1438418121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes5" unique_id=1098539669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 192.96538, -100)
+mesh = SubResource("BoxMesh_kl51u")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes5" unique_id=130172673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 192.94661, -100)
+shape = SubResource("BoxShape3D_8cvfd")
+
+[node name="Grapple Boxes6" type="StaticBody3D" parent="." unique_id=653171962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes6" unique_id=1464394059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 395.81482, 100)
+mesh = SubResource("BoxMesh_kl51u")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes6" unique_id=446500811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 395.79602, 100)
+shape = SubResource("BoxShape3D_8cvfd")
+
+[node name="Grapple Boxes7" type="StaticBody3D" parent="." unique_id=1782606937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes7" unique_id=255363219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 640.9313, -100)
+mesh = SubResource("BoxMesh_kl51u")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes7" unique_id=1444466378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 640.9125, -100)
+shape = SubResource("BoxShape3D_8cvfd")
+
+[node name="Grapple Boxes8" type="StaticBody3D" parent="." unique_id=104671974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+script = ExtResource("4_5mcvg")
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes8" unique_id=245767847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1061.0575, 100)
+mesh = SubResource("BoxMesh_kl51u")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes8" unique_id=1180713474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1061.0387, 100)
+shape = SubResource("BoxShape3D_8cvfd")
+
+[node name="outofbounds" type="Area3D" parent="." unique_id=456631095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, -20, -163)
+collision_layer = 0
+collision_mask = 2
+
+[node name="outofbounds" type="MeshInstance3D" parent="outofbounds" unique_id=768151504]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -500, 0)
+visible = false
+mesh = SubResource("BoxMesh_f5lnk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="outofbounds" unique_id=215843481]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -500, 0)
+shape = SubResource("BoxShape3D_kl51u")
+
+[editable path="Player"]
+[editable path="Player/Head"]

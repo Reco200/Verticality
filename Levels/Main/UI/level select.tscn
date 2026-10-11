@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://dk37s1layhny"]
+
+[ext_resource type="Theme" uid="uid://dw5bwwpc4xns3" path="res://Levels/Main/UI/theme.tres" id="1_mk84k"]
+[ext_resource type="PackedScene" uid="uid://v4e8po5651e6" path="res://Levels/Main/UI/Buttons/button.tscn" id="2_vjb62"]
+[ext_resource type="Script" uid="uid://ipl5jqfh2xgb" path="res://Levels/Main/UI/Buttons/level1.gd" id="3_vjb62"]
+[ext_resource type="FontFile" uid="uid://qnhon4ejlo5r" path="res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf" id="4_hw4rb"]
+[ext_resource type="Script" uid="uid://dfiwuae1ow0my" path="res://Levels/Main/UI/Buttons/level2.gd" id="4_reym2"]
+[ext_resource type="Script" uid="uid://brlxodupe1mkl" path="res://Levels/Main/UI/Buttons/homebutton.gd" id="5_iytnu"]
+[ext_resource type="Script" uid="uid://cn47c8ec2cjhj" path="res://Levels/Main/UI/Buttons/level3.gd" id="7_e34ct"]
+[ext_resource type="Script" uid="uid://cyhhe21p72g3s" path="res://Levels/Main/UI/Buttons/level5.gd" id="8_267be"]
+[ext_resource type="Script" uid="uid://crpb6troyvcaj" path="res://Levels/Main/UI/Buttons/level4.gd" id="8_kneaf"]
+[ext_resource type="Script" uid="uid://cibbe1ocxhx01" path="res://Levels/Main/UI/Buttons/level6.gd" id="9_mpbc4"]
+[ext_resource type="Script" uid="uid://bvji60f4ox7pj" path="res://Levels/Main/UI/Buttons/level7.gd" id="10_0snxi"]
+[ext_resource type="Script" uid="uid://5tjg0m7iv23a" path="res://Levels/Main/UI/Buttons/level8.gd" id="11_voq0w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 36.0
+content_margin_top = 32.0
+content_margin_right = 36.0
+content_margin_bottom = 32.0
+bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7529412, 0.8745098, 1)
+
+[sub_resource type="Theme" id="Theme_1obja"]
+default_font = ExtResource("4_hw4rb")
+
+[node name="Control" type="Control" unique_id=902198821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mk84k")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=855645012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2066658341]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=438536930]
+layout_mode = 2
+theme_override_constants/margin_left = 37
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 367
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1820779524]
+layout_mode = 2
+theme = SubResource("Theme_1obja")
+theme_type_variation = &"RichtextLabeltitle"
+theme_override_colors/default_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "[wave]Level Select"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Level Containers" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=329340062]
+layout_mode = 2
+theme_override_constants/margin_left = 19
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="level 1 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=2143129057]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -316
+
+[node name="1" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 1 container" unique_id=1119117551 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "1"
+script = ExtResource("3_vjb62")
+
+[node name="level 2 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=997993249]
+layout_mode = 2
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -316
+
+[node name="2" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 2 container" unique_id=716562248 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "2"
+script = ExtResource("4_reym2")
+
+[node name="level 3 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=2077833006]
+layout_mode = 2
+theme_override_constants/margin_left = 270
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -316
+
+[node name="3" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 3 container" unique_id=2012067052 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "3"
+script = ExtResource("7_e34ct")
+
+[node name="level 4 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=1229799457]
+layout_mode = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -316
+
+[node name="4" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 4 container" unique_id=1929741369 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "4"
+script = ExtResource("8_kneaf")
+
+[node name="level 5 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=952409243]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -500
+
+[node name="5" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 5 container" unique_id=1218504154 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "5"
+script = ExtResource("8_267be")
+
+[node name="level 6 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=1304222216]
+layout_mode = 2
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -500
+
+[node name="6" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 6 container" unique_id=143543722 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "6"
+script = ExtResource("9_mpbc4")
+
+[node name="level 7 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=1743186530]
+layout_mode = 2
+theme_override_constants/margin_left = 270
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -500
+
+[node name="7" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 7 container" unique_id=1619474966 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "7"
+script = ExtResource("10_0snxi")
+
+[node name="level 8 container" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers" unique_id=1516067489]
+layout_mode = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = -500
+
+[node name="8" parent="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 8 container" unique_id=664772511 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(116, 76)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "8"
+script = ExtResource("11_voq0w")
+
+[node name="BackContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1465789627]
+layout_mode = 2
+theme_override_constants/margin_left = -206
+theme_override_constants/margin_top = -428
+
+[node name="Back" parent="PanelContainer/VBoxContainer/BackContainer" unique_id=1333084993 instance=ExtResource("2_vjb62")]
+custom_minimum_size = Vector2(150, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "<"
+script = ExtResource("5_iytnu")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 1 container/1" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 1 container/1" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 2 container/2" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 2 container/2" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 3 container/3" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 3 container/3" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 4 container/4" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 4 container/4" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 5 container/5" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 5 container/5" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 6 container/6" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 6 container/6" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 7 container/7" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 7 container/7" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 8 container/8" to="PanelContainer/VBoxContainer/MarginContainer/Level Containers/level 8 container/8" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/BackContainer/Back" to="PanelContainer/VBoxContainer/BackContainer/Back" method="_on_pressed"]

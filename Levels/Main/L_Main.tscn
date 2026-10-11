@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://d2vgv6ie0v40s"]
+
+[ext_resource type="Script" uid="uid://1ryhjik5vack" path="res://Levels/Main/L_Main.gd" id="1_km1jj"]
+[ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="1_qgept"]
+[ext_resource type="Script" uid="uid://dktwb344bc3wu" path="res://scripts/grapple_halfway.gd" id="4_e310h"]
+[ext_resource type="Script" uid="uid://b6vrajsej73yf" path="res://scripts/grapple_finish.gd" id="5_4rr74"]
+[ext_resource type="PackedScene" uid="uid://cwiw4ulqhp68g" path="res://Levels/Main/UI/pause.tscn" id="6_ucjps"]
+[ext_resource type="Texture2D" uid="uid://dnf4gjtaakise" path="res://textures/cool texture.png" id="7_3bgcu"]
+[ext_resource type="PackedScene" path="res://Levels/Main/UI/high_score.tscn" id="7_high_score"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
+sky_top_color = Color(0.24138969, 0.45822746, 0.7018054, 1)
+sky_curve = 0.05404749
+ground_bottom_color = Color(0, 0, 0.3372549, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sun_curve = 0.27037555
+
+[sub_resource type="Sky" id="Sky_fvl5c"]
+sky_material = SubResource("ProceduralSkyMaterial_ggqlx")
+
+[sub_resource type="Environment" id="Environment_7ofk6"]
+background_mode = 2
+background_color = Color(0, 0.16078432, 1, 1)
+sky = SubResource("Sky_fvl5c")
+sky_rotation = Vector3(-6.2831855, -6.2831855, 0)
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.9
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_ddoul"]
+font_size = 20
+font_color = Color(0, 0.7529412, 0.8745098, 1)
+outline_size = 10
+outline_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bgcu"]
+albedo_color = Color(0.0627451, 0.11372549, 0.20392157, 1)
+metallic = 1.0
+roughness = 0.6
+uv1_scale = Vector3(-18.38, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v71ei"]
+material = SubResource("StandardMaterial3D_3bgcu")
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fvl5c"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v71ei"]
+albedo_texture = ExtResource("7_3bgcu")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ucjps"]
+material = SubResource("StandardMaterial3D_v71ei")
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4rr74"]
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_outofbounds"]
+size = Vector3(600, 10, 600)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_outofbounds"]
+size = Vector3(600, 10, 600)
+
+[node name="L_Main" type="Node3D" unique_id=942603412]
+script = ExtResource("1_km1jj")
+
+[node name="Player" parent="." unique_id=86671428 instance=ExtResource("1_qgept")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225.73882, 15.904434, 7.7211456)
+
+[node name="Lighting" type="Node" parent="." unique_id=1379698054]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting" unique_id=1630392256]
+environment = SubResource("Environment_7ofk6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=1923044462]
+transform = Transform3D(-0.8660253, -0.4330129, 0.2500001, 0, 0.49999994, 0.86602545, -0.50000024, 0.74999994, -0.43301257, 21.62854, 2497.8403, -88.58176)
+light_indirect_energy = 0.0
+shadow_enabled = true
+shadow_bias = 0.46
+directional_shadow_max_distance = 8192.0
+
+[node name="crosshair" type="CanvasLayer" parent="." unique_id=1354287992]
+
+[node name="Label" type="Label" parent="crosshair" unique_id=601063724]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 5.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "⊕"
+label_settings = SubResource("LabelSettings_ddoul")
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=1944160899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.20401, -0.9000778, 8.100357)
+script = ExtResource("5_4rr74")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=1250860596]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18.8909, 0.070495605, -170.33371)
+mesh = SubResource("BoxMesh_v71ei")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=12646094]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -19.350006, 0, -171.10852)
+shape = SubResource("BoxShape3D_fvl5c")
+
+[node name="HighScore" parent="." unique_id=67103656 instance=ExtResource("7_high_score")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=853467038]
+
+[node name="Control" parent="CanvasLayer" unique_id=1692540186 instance=ExtResource("6_ucjps")]
+
+[node name="Grapple Boxes" type="StaticBody3D" parent="." unique_id=2065814864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes" unique_id=354032034]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.22316, 1.5258789e-05, -24.783096)
+mesh = SubResource("BoxMesh_ucjps")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes" unique_id=974472456]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.22316, 1.5258789e-05, -24.783096)
+shape = SubResource("BoxShape3D_4rr74")
+
+[node name="Grapple Boxes2" type="StaticBody3D" parent="." unique_id=1848789254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes2" unique_id=1255878241]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.466156, 200.00002, -74.782486)
+mesh = SubResource("BoxMesh_ucjps")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes2" unique_id=874073878]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.466156, 200.00002, -74.782486)
+shape = SubResource("BoxShape3D_4rr74")
+
+[node name="Grapple Boxes3" type="StaticBody3D" parent="." unique_id=472906738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes3" unique_id=713191409]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.709152, 400, -124.78186)
+mesh = SubResource("BoxMesh_ucjps")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes3" unique_id=240867573]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.709152, 400, -124.78186)
+shape = SubResource("BoxShape3D_4rr74")
+
+[node name="Grapple Boxes4" type="StaticBody3D" parent="." unique_id=1350515619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes4" unique_id=1334418285]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.952164, 600, -174.78125)
+mesh = SubResource("BoxMesh_ucjps")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes4" unique_id=1749100861]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -33.952164, 600, -174.78125)
+shape = SubResource("BoxShape3D_4rr74")
+
+[node name="Grapple Boxes5" type="StaticBody3D" parent="." unique_id=1906243578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes5" unique_id=405965157]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -34.19516, 800, -224.78072)
+mesh = SubResource("BoxMesh_ucjps")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes5" unique_id=1341750701]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -34.19516, 800, -224.78072)
+shape = SubResource("BoxShape3D_4rr74")
+
+[node name="Grapple Boxes6" type="StaticBody3D" parent="." unique_id=605915693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
+script = ExtResource("4_e310h")
+
+[node name="grapple boxes2" type="MeshInstance3D" parent="Grapple Boxes6" unique_id=278024737]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -34.438156, 999.99994, -274.7801)
+mesh = SubResource("BoxMesh_ucjps")
+skeleton = NodePath("../Floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grapple Boxes6" unique_id=783701169]
+transform = Transform3D(-0.9999882, 0, -0.004859993, 0, 1, 0, 0.004859993, 0, -0.9999882, -34.438156, 999.99994, -274.7801)
+shape = SubResource("BoxShape3D_4rr74")
+
+[node name="outofbounds" type="Area3D" parent="." unique_id=327290639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, -20, -163)
+collision_layer = 0
+collision_mask = 2
+
+[node name="outofbounds" type="MeshInstance3D" parent="outofbounds" unique_id=1791701590]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -500, 0)
+visible = false
+mesh = SubResource("BoxMesh_outofbounds")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="outofbounds" unique_id=1045561888]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -500, 0)
+shape = SubResource("BoxShape3D_outofbounds")
