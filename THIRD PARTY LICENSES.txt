@@ -1,6 +1,5 @@
 THIS TEXT DOCUMENT CONTAINS THE LICENSES OF THIRD PARTY SOFTWARE / LIBRARIES USED IN THE SOFTWARE.
 
-
 Software / Library: grappling-hook-3d
 Website: https://github.com/ivan-resetnikov/grappling-hook-3d
 
