@@ -49,4 +49,3 @@ Once the Export Templates install, re-open the Export GUI and configure the game
 Once you configure your export; you can now click export project, and it will output to where ever you told it to. 
 #### Congratulations! The game is now built for your prefered platform.
 
-# Verticality Copyright (C) 2026 Elliot "Reco200" Beardsley
