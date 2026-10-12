@@ -1,10 +1,10 @@
 9cad1ddce9e5a63143ba340c9520626b
-::res://::1791761251
-Credits.txt::TextFile::-1::1791760922::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1791758707::0::1::::<><><>0<>0<><>::
+::res://::1791770888
+CREDITS.txt::TextFile::-1::1791760922::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1791762537::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D::501269865758229849::1791081345::1791730368::1::::<><><>0<>0<>5b64ab50ec242f90e76ea1b25d8e4156<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.s3tc.ctex<*>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.etc2.ctex::
 LICENSE.txt::TextFile::-1::1791138041::0::1::::<><><>0<>0<><>::
-README.md::TextFile::-1::1791759816::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1791764828::0::1::::<><><>0<>0<><>::
 THIRD PARTY LICENSES.txt::TextFile::-1::1791760242::0::1::::<><><>0<>0<><>::
 ::res://addons/::1791068282
 ::res://addons/addons/::1788216085
@@ -18,7 +18,7 @@ plugin.gd::GDScript::8281194454416576452::1788215975::0::1::::<>EditorPlugin<><>
 hook.tscn::PackedScene::7965145765686123344::1791760650::0::1::::<><><>0<>0<><>::uid://din0nustn1lf3::::res://addons/grappling_hook_3d/src/hook_model.gd
 hook_controller.gd::GDScript::7416305452098745096::1791054736::0::1::::HookController<>Node<><>0<>0<><>::
 hook_model.gd::GDScript::7749151930281427186::1791751455::0::1::::<>Node3D<><>0<>0<><>::
-::res://assets/::1791761428
+::res://assets/::1791761430
 Verticality_Title.png::CompressedTexture2D::6449604615776376840::1791082418::1791761430::1::::<><><>0<>0<>0551592de7ccdfeef8fe207c7ad44c0d<>res://.godot/imported/Verticality_Title.png-bd06b6c4be247d232116c057d432b32b.ctex::
 ::res://fonts/::1791067702
 Doto-Regular.ttf::FontFile::8521842259383304787::1787240273::1791067702::1::::<><><>0<>0<>07fa2fbbb30ffdd6f808ac98e55ea9be<>res://.godot/imported/Doto-Regular.ttf-35140c919c4b745e3fe797d0a67ef3b8.fontdata::
@@ -63,7 +63,7 @@ IBMPlexMono-Thin.ttf::FontFile::9157502511416874763::1787240273::1790978639::1::
 IBMPlexMono-ThinItalic.ttf::FontFile::7158888344548350586::1787240273::1790978639::1::::<><><>0<>0<>5e062c81f67620d12a56c3e1e57a917d<>res://.godot/imported/IBMPlexMono-ThinItalic.ttf-60fd1caf4881dd8373c44584cbf9e3f9.fontdata::
 OFL.txt::TextFile::-1::1787240273::0::1::::<><><>0<>0<><>::
 ::res://Levels/::1788546369
-::res://Levels/Main/::1791761407
+::res://Levels/Main/::1791765460
 Level 2.tscn::PackedScene::8091554696675450451::1791309231::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>res://Levels/Main/UI/high_score.tscn
 Level 3.tscn::PackedScene::1869850060479196540::1791309454::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>res://Levels/Main/UI/high_score.tscn<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn
 Level 4.tscn::PackedScene::880871349102621362::1791309231::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>res://Levels/Main/UI/high_score.tscn<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd
@@ -72,7 +72,7 @@ Level 6.tscn::PackedScene::8668780353662382355::1791675502::0::1::::<><><>0<>0<>
 Level 7.tscn::PackedScene::103726086690329429::1791676354::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>res://Levels/Main/UI/high_score.tscn<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd
 Level 8.tscn::PackedScene::8333989571053377706::1791748861::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>res://Levels/Main/UI/high_score.tscn<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd
 L_Main.gd::GDScript::1861474550355443990::1791309099::0::1::::<>Node3D<><>0<>0<><>::
-L_Main.tscn::PackedScene::9098116206568334096::1791761339::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>res://Levels/Main/UI/high_score.tscn
+L_Main.tscn::PackedScene::9098116206568334096::1791765460::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>res://Levels/Main/UI/high_score.tscn
 ::res://Levels/Main/UI/::1791761158
 control.tscn::PackedScene::5022973694340173729::1791760439::0::1::::<><><>0<>0<><>::uid://dw5bwwpc4xns3::::res://Levels/Main/UI/theme.tres<>uid://qnhon4ejlo5r::::res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf<>uid://v4e8po5651e6::::res://Levels/Main/UI/Buttons/button.tscn<>uid://cxt0dns1wx4uc::::res://Levels/Main/UI/Buttons/levelselect.gd<>uid://w6nasfwhloy5::::res://Levels/Main/UI/Buttons/exit.gd<>uid://cpbo80or0fo2e::::res://Levels/Main/UI/Buttons/credits.gd<>uid://yw5l42eiyqem::::res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf
 credits.tscn::PackedScene::4021301979784001057::1791760441::0::1::::<><><>0<>0<><>::uid://dw5bwwpc4xns3::::res://Levels/Main/UI/theme.tres<>uid://v4e8po5651e6::::res://Levels/Main/UI/Buttons/button.tscn<>uid://brlxodupe1mkl::::res://Levels/Main/UI/Buttons/homebutton.gd<>uid://qnhon4ejlo5r::::res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf<>uid://yw5l42eiyqem::::res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf
