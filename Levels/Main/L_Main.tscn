@@ -117,10 +117,6 @@ shape = SubResource("BoxShape3D_fvl5c")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=853467038]
 
 [node name="Control" parent="CanvasLayer" unique_id=1692540186 instance=ExtResource("6_ucjps")]
-offset_left = -192.0
-offset_top = 46.0
-offset_right = -192.0
-offset_bottom = 46.0
 
 [node name="Grapple Boxes" type="StaticBody3D" parent="." unique_id=2065814864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.64001, 73.1414, -63.69597)
