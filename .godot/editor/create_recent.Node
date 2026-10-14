@@ -1,9 +1,10 @@
+Label
+CanvasLayer
 MarginContainer
 MeshInstance3D
 RichTextLabel
 CollisionShape3D
 Area3D
-CanvasLayer
 ColorRect
 AnimationPlayer
 Button

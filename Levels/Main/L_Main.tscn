@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1ryhjik5vack" path="res://Levels/Main/L_Main.gd" id="1_km1jj"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://Player/Player.tscn" id="1_qgept"]
+[ext_resource type="FontFile" uid="uid://qepxcojefqkh" path="res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf" id="3_3bgcu"]
 [ext_resource type="Script" uid="uid://dktwb344bc3wu" path="res://scripts/grapple_halfway.gd" id="4_e310h"]
 [ext_resource type="Script" uid="uid://b6vrajsej73yf" path="res://scripts/grapple_finish.gd" id="5_4rr74"]
 [ext_resource type="PackedScene" uid="uid://cwiw4ulqhp68g" path="res://Levels/Main/UI/pause.tscn" id="6_ucjps"]
@@ -33,6 +34,13 @@ font_size = 20
 font_color = Color(0, 0.7529412, 0.8745098, 1)
 outline_size = 10
 outline_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ygqxw"]
+font = ExtResource("3_3bgcu")
+font_size = 30
+font_color = Color(0, 0.7529412, 0.8745098, 1)
+outline_size = 3
+outline_color = Color(0.06666667, 0.06666667, 0.06666667, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bgcu"]
 albedo_color = Color(0.0627451, 0.11372549, 0.20392157, 1)
@@ -98,6 +106,21 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "+"
 label_settings = SubResource("LabelSettings_ddoul")
+
+[node name="web keybind" type="CanvasLayer" parent="." unique_id=957749012]
+
+[node name="Label" type="Label" parent="web keybind" unique_id=1494653689]
+offset_left = 21.21
+offset_top = 550.0
+offset_right = 475.21
+offset_bottom = 588.0
+theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3bgcu")
+theme_override_font_sizes/font_size = 28
+text = "Type 1 to open pause menu."
+label_settings = SubResource("LabelSettings_ygqxw")
+metadata/_edit_use_anchors_ = true
 
 [node name="floor" type="StaticBody3D" parent="." unique_id=1944160899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -173.20401, -0.9000778, 8.100357)
