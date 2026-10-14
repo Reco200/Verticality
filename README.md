@@ -6,7 +6,7 @@
 It is licensed under the ```GNU General Public license 3.0```.   
 
 # Gameplay
-This is a game about grappling to the top of the level by left clicking on floating blocks in    
+Verticality is a game about grappling to the top of the level by left clicking on floating blocks in    
 the given level. The goal is to make it to the highest block, and make it all the way back down to   
 the flat plane that you started on. Try to complete levels as fast as you can, beating your high scores.
 
