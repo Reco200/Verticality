@@ -1,20 +1,20 @@
 res://addons/grappling_hook_3d/src/hook.tscn::19e182a8caa306475a9bcf1cf8997d40::1791760650::res://.godot/exported/133200997/export-27aa3f9e25b2abefe410bc64d8ac3197-hook.scn
 res://Levels/Main/UI/Buttons/button.tscn::77ea79efde211f6ad169dc86b0e84177::1790992470::res://.godot/exported/133200997/export-2e2b94f419cb921c2a94932210dc7248-button.scn
 res://Levels/Main/UI/Buttons/Pause menu buttons.tres::42cd6b3fcbe035866e218d8e938ff75d::1790992096::res://.godot/exported/133200997/export-88d818f955df51c4064d10f6cbb16ea0-Pause menu buttons.res
-res://Levels/Main/UI/control.tscn::7991b0bb54d41c879061144a276e3552::1791760439::res://.godot/exported/133200997/export-44ec25d646f09a92508fa4fdb940db9c-control.scn
-res://Levels/Main/UI/credits.tscn::a76da0992e48d4707b0911e456e3d126::1791760441::res://.godot/exported/133200997/export-dc36e510e5035e532b7b6cfc11a7be25-credits.scn
+res://Levels/Main/UI/control.tscn::8fe90f7d22798ddaa54cdb858ad561a6::1792010526::res://.godot/exported/133200997/export-44ec25d646f09a92508fa4fdb940db9c-control.scn
+res://Levels/Main/UI/credits.tscn::0ea20da217d8c57357152f518a974958::1792010338::res://.godot/exported/133200997/export-dc36e510e5035e532b7b6cfc11a7be25-credits.scn
 res://Levels/Main/UI/high_score.tscn::16a1bbf65f0136204be46a8177520e4a::1790993623::res://.godot/exported/133200997/export-7a47cad4da38e25540e032ef6aa5c715-high_score.scn
-res://Levels/Main/UI/level select.tscn::a35c10a22a3162312120f9e9659e87ca::1791761158::res://.godot/exported/133200997/export-d9722523899011fac3f00b8143ec4d3c-level select.scn
+res://Levels/Main/UI/level select.tscn::3fd80f3224eff4a25fbde5e7e1759994::1792010338::res://.godot/exported/133200997/export-d9722523899011fac3f00b8143ec4d3c-level select.scn
 res://Levels/Main/UI/new_color_palette.tres::c27beaaa0b34c3484c4df9f3e912a264::1790897277::res://.godot/exported/133200997/export-70bd5cd3e69ae7ea116e86de82e7303b-new_color_palette.res
-res://Levels/Main/UI/pause.tscn::8969ef06a2b0705b2f0ce6f75b83e81c::1791083221::res://.godot/exported/133200997/export-e342ffb3cb445ccf0b93c5624646684f-pause.scn
+res://Levels/Main/UI/pause.tscn::cab7fc338580a901b84352fa3162abf2::1792010367::res://.godot/exported/133200997/export-e342ffb3cb445ccf0b93c5624646684f-pause.scn
 res://Levels/Main/UI/style box.tres::d35721fadaf07078d58ab387a044698c::1790980818::res://.godot/exported/133200997/export-737cea049594829ba6311049ca48b81e-style box.res
-res://Levels/Main/UI/theme.tres::2819382eb5c7b9248746dac167297c55::1790992126::res://.godot/exported/133200997/export-53c34eda1dca5a09f7b67f5ec04dcae2-theme.res
-res://Levels/Main/UI/times.tscn::67965012d2b48484857432a1348ffb10::1791142851::res://.godot/exported/133200997/export-81061743a2a0fb395d09c5c7f1aae3d5-times.scn
+res://Levels/Main/UI/theme.tres::1378c138f80254b7706363dc0ba252af::1792010268::res://.godot/exported/133200997/export-53c34eda1dca5a09f7b67f5ec04dcae2-theme.res
+res://Levels/Main/UI/times.tscn::d3af000c182f226f515bb9962eae0690::1792010446::res://.godot/exported/133200997/export-81061743a2a0fb395d09c5c7f1aae3d5-times.scn
 res://Levels/Main/Level 2.tscn::c7bdeb9af2147c7c56c14c87d2035694::1791309231::res://.godot/exported/133200997/export-94af4d972b04ded35b36334b1c98375b-Level 2.scn
 res://Levels/Main/Level 3.tscn::34f8f47b79430600c37baa8e8318f0db::1791309454::res://.godot/exported/133200997/export-f5e70c1747a9a4a179670d58c9c3a746-Level 3.scn
 res://Levels/Main/Level 4.tscn::48ce4e4fef5ddcf3248209bbfaf1f08b::1791309231::res://.godot/exported/133200997/export-deefa2e7ee5943665428f968feb05861-Level 4.scn
 res://Levels/Main/Level 5.tscn::c70b6ed414fb865b265573ce8ed8f49c::1791408406::res://.godot/exported/133200997/export-640eac31f40e00de7b80c0541cc4fff3-Level 5.scn
-res://Levels/Main/L_Main.tscn::bc08af084d5ff3f097d0666b572e671c::1791761339::res://.godot/exported/133200997/export-779a0e1f7bd88b28c4a1413c5fb169f2-L_Main.scn
+res://Levels/Main/L_Main.tscn::bc08af084d5ff3f097d0666b572e671c::1792000603::res://.godot/exported/133200997/export-779a0e1f7bd88b28c4a1413c5fb169f2-L_Main.scn
 res://Levels/Main/Level 6.tscn::ccfb2d05a89928ca3b03d5fc899f86cc::1791675502::res://.godot/exported/133200997/export-8638c4160431917e490782b9b4dd5db6-Level 6.scn
 res://Levels/Main/Level 7.tscn::44811dbe8291b34f052d513d5153972d::1791676354::res://.godot/exported/133200997/export-215cc8750dc02351dc84640c6fb4ba2c-Level 7.scn
 res://Player/Head.tscn::c05d8b5d1765594632fbe98d862d1002::1788219965::res://.godot/exported/133200997/export-494e7fa668a74ff4c9c34f313a2b0aa4-Head.scn
