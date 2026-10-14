@@ -108,6 +108,7 @@ text = "+"
 label_settings = SubResource("LabelSettings_ddoul")
 
 [node name="web keybind" type="CanvasLayer" parent="." unique_id=957749012]
+follow_viewport_enabled = true
 
 [node name="Label" type="Label" parent="web keybind" unique_id=1494653689]
 offset_left = 21.21
