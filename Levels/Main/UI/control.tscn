@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cdtfv4f042xft"]
 
 [ext_resource type="Theme" uid="uid://dw5bwwpc4xns3" path="res://Levels/Main/UI/theme.tres" id="1_yb7o8"]
-[ext_resource type="FontFile" uid="uid://qnhon4ejlo5r" path="res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf" id="2_iadhv"]
+[ext_resource type="FontFile" uid="uid://cf65vew26nbca" path="res://fonts/Doto/static/Doto-Bold.ttf" id="2_1obja"]
 [ext_resource type="PackedScene" uid="uid://v4e8po5651e6" path="res://Levels/Main/UI/Buttons/button.tscn" id="2_pntgy"]
 [ext_resource type="Script" uid="uid://cxt0dns1wx4uc" path="res://Levels/Main/UI/Buttons/levelselect.gd" id="3_pntgy"]
 [ext_resource type="Script" uid="uid://w6nasfwhloy5" path="res://Levels/Main/UI/Buttons/exit.gd" id="4_nulli"]
 [ext_resource type="Script" uid="uid://cpbo80or0fo2e" path="res://Levels/Main/UI/Buttons/credits.gd" id="4_rtdmk"]
-[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="7_1obja"]
+[ext_resource type="FontFile" uid="uid://qepxcojefqkh" path="res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf" id="7_1obja"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 content_margin_left = 36.0
@@ -21,7 +21,7 @@ border_width_bottom = 2
 border_color = Color(0, 0.7529412, 0.8745098, 1)
 
 [sub_resource type="Theme" id="Theme_1ouw8"]
-default_font = ExtResource("2_iadhv")
+default_font = ExtResource("2_1obja")
 
 [node name="Control" type="Control" unique_id=902198821]
 layout_mode = 3
@@ -108,7 +108,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("7_1obja")
 theme_override_font_sizes/font_size = 21
-text = "Verticality  Copyright (C) 2026  Elliot Beardsley
+text = "Verticality - Copyright (C) 2026 - Elliot Beardsley
 This program comes with ABSOLUTELY NO WARRANTY
 This is free software, and you are welcome to redistribute it
 under certain conditions; see license and third party licenses for details."

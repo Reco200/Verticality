@@ -1,8 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://dw5bwwpc4xns3"]
 
 [ext_resource type="StyleBox" uid="uid://cyuwrxusjc4g2" path="res://Levels/Main/UI/style box.tres" id="1_g5wqy"]
-[ext_resource type="FontFile" uid="uid://xi8sw5pri0mh" path="res://IBMPlexMono-Regular.ttf" id="1_ppxs2"]
-[ext_resource type="FontFile" uid="uid://dtobq5qljc40n" path="res://Doto-Regular.ttf" id="2_ep3nk"]
+[ext_resource type="FontFile" uid="uid://qepxcojefqkh" path="res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf" id="1_ppxs2"]
+[ext_resource type="FontFile" uid="uid://dtobq5qljc40n" path="res://fonts/Doto-Regular.ttf" id="2_ep3nk"]
 
 [resource]
 default_font = ExtResource("2_ep3nk")

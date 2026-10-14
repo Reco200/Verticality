@@ -1,1 +1,6 @@
-res://Levels/Main/L_Main.tscn
+res://Levels/Main/UI/credits.tscn
+res://Levels/Main/UI/theme.tres
+res://Levels/Main/UI/control.tscn
+res://Levels/Main/UI/level select.tscn
+res://Levels/Main/UI/pause.tscn
+res://Levels/Main/UI/times.tscn

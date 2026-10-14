@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://f5tw6oeeovde" path="res://Levels/Main/UI/pause_menu.gd" id="1_nrs5n"]
 [ext_resource type="Theme" uid="uid://c706yjnu8svsh" path="res://Levels/Main/UI/Buttons/Pause menu buttons.tres" id="2_nrs5n"]
 [ext_resource type="PackedScene" uid="uid://dml6qojq6o86h" path="res://Levels/Main/UI/times.tscn" id="3_times"]
-[ext_resource type="FontFile" uid="uid://qnhon4ejlo5r" path="res://fonts/Doto/static/Doto_Rounded-SemiBold.ttf" id="4_sitlt"]
+[ext_resource type="FontFile" uid="uid://cf65vew26nbca" path="res://fonts/Doto/static/Doto-Bold.ttf" id="4_sitlt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 content_margin_left = 26.0

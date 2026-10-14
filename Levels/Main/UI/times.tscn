@@ -3,8 +3,9 @@
 [ext_resource type="Theme" uid="uid://dw5bwwpc4xns3" path="res://Levels/Main/UI/theme.tres" id="1_theme"]
 [ext_resource type="Script" uid="uid://bieyju38r8li8" path="res://Levels/Main/UI/times.gd" id="2_script"]
 [ext_resource type="PackedScene" uid="uid://v4e8po5651e6" path="res://Levels/Main/UI/Buttons/button.tscn" id="3_oa0q6"]
-[ext_resource type="FontFile" uid="uid://yw5l42eiyqem" path="res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf" id="3_pxfqm"]
+[ext_resource type="FontFile" uid="uid://cf65vew26nbca" path="res://fonts/Doto/static/Doto-Bold.ttf" id="3_xbwmp"]
 [ext_resource type="Script" uid="uid://nqhvhabmp84d" path="res://Levels/Main/UI/Buttons/backtogame.gd" id="4_xbwmp"]
+[ext_resource type="FontFile" uid="uid://qepxcojefqkh" path="res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf" id="6_sa6q4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxfqm"]
 bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
@@ -56,6 +57,7 @@ theme_override_constants/separation = 26
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("3_xbwmp")
 theme_override_font_sizes/font_size = 40
 text = "Logs"
 
@@ -79,7 +81,7 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
-theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_fonts/font = ExtResource("6_sa6q4")
 theme_override_font_sizes/font_size = 22
 text = "Course"
 
@@ -88,7 +90,7 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
-theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_fonts/font = ExtResource("6_sa6q4")
 theme_override_font_sizes/font_size = 22
 text = "Recorded"
 
@@ -97,7 +99,7 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
-theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_fonts/font = ExtResource("6_sa6q4")
 theme_override_font_sizes/font_size = 22
 text = "Time"
 
@@ -114,7 +116,7 @@ columns = 3
 [node name="Status" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1187237875]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
-theme_override_fonts/font = ExtResource("3_pxfqm")
+theme_override_fonts/font = ExtResource("6_sa6q4")
 theme_override_font_sizes/font_size = 18
 text = "No recorded course times yet."
 
