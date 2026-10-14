@@ -107,7 +107,7 @@ offset_right = 5.0
 offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "⊕"
+text = "+"
 label_settings = SubResource("LabelSettings_f5lnk")
 
 [node name="HighScore" parent="." unique_id=1599733306 instance=ExtResource("4_sbqv1")]
