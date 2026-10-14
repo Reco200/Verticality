@@ -1,4 +1,4 @@
-![Verticality title](assets/Verticality_Title2.png)
+![Verticality title](assets/Verticality_Title.png)
 
 # A libre video game about grappling hook based parkour.
  ```Verticality``` is a 3D game, running in ```Godot Engine 4.7.2```. It was created as a vessel to learn how to use the Godot Engine.
