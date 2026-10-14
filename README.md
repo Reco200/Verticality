@@ -23,7 +23,7 @@ the flat plane that you started on. Try to complete levels as fast as you can, b
 ## Step 1
 Open terminal and clone the github repository with the commmand:
 
-    https://github.com/Reco200/Verticality.git
+    git clone https://github.com/Reco200/Verticality.git
 
 ## Step 2
 Import the project in Godot by clicking "Import" and then selecting the folder that Git cloned.
