@@ -42,7 +42,7 @@ func _load_times() -> void:
 		if line.is_empty():
 			continue
 
-		var fields := line.split(" | ", false, 2)
+		var fields: PackedStringArray = line.split(" | ", false, 2)
 		if fields.size() != 3:
 			push_warning("Times: Ignoring malformed record on line %d." % (index + 1))
 			continue

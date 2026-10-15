@@ -84,14 +84,17 @@ text = "How to Play"
 script = ExtResource("4_rtdmk")
 
 [node name="Title" type="Label" parent="." unique_id=172755624]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -145.0
-offset_right = -24.0
-offset_bottom = -20.0
+offset_left = 10.0
+offset_top = -140.0
+offset_right = -123.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("7_1obja")
@@ -99,7 +102,8 @@ theme_override_font_sizes/font_size = 21
 text = "Verticality - Copyright (C) 2026 - Elliot Beardsley
 This program comes with ABSOLUTELY NO WARRANTY
 This is free software, and you are welcome to redistribute it
-under certain conditions; see license and third party licenses for details."
+under certain conditions; see license and third party licenses for details.
+"
 autowrap_mode = 3
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" to="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" method="_on_pressed"]

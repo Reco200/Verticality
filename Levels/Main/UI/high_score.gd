@@ -36,7 +36,7 @@ func _update_best_time() -> void:
 
 	var best_time := INF
 	for line in result.text.split("\n"):
-		var fields := line.strip_edges().split(" | ", false, 2)
+		var fields: PackedStringArray = line.strip_edges().split(" | ", false, 2)
 		if fields.size() != 3 or fields[1] != _course_scene_path:
 			continue
 
