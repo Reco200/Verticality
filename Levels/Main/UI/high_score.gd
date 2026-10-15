@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const COURSE_TIMES_PATH: String = "user://course_times.txt"
+const CourseTimeStore = preload("res://scripts/course_time_store.gd")
 
 @onready var best_time_label: Label = $BestTime
 
@@ -25,22 +25,17 @@ func _ready() -> void:
 
 
 func _update_best_time() -> void:
-	if not FileAccess.file_exists(COURSE_TIMES_PATH):
-		best_time_label.text = "BEST  --"
-		return
-
-	var file := FileAccess.open(COURSE_TIMES_PATH, FileAccess.READ)
-	if file == null:
-		var error := FileAccess.get_open_error()
-		push_error(
-			"HighScore: Could not open %s (error %d)." %
-			[COURSE_TIMES_PATH, error]
-		)
+	var result: Dictionary = CourseTimeStore.read_text()
+	if not result.ok:
 		best_time_label.text = "BEST  unavailable"
 		return
 
+	if not result.exists:
+		best_time_label.text = "BEST  --"
+		return
+
 	var best_time := INF
-	for line in file.get_as_text().split("\n"):
+	for line in result.text.split("\n"):
 		var fields := line.strip_edges().split(" | ", false, 2)
 		if fields.size() != 3 or fields[1] != _course_scene_path:
 			continue
@@ -48,8 +43,6 @@ func _update_best_time() -> void:
 		var duration_text: String = fields[2].trim_suffix(" seconds").strip_edges()
 		if duration_text.is_valid_float():
 			best_time = minf(best_time, float(duration_text))
-
-	file.close()
 
 	best_time_label.text = (
 		"BEST  --"

@@ -2,6 +2,8 @@ class_name HookController
 extends Node
 ## Node that is responsible for managing the hook, and the hook interface.
 
+const CourseTimeStore = preload("res://scripts/course_time_store.gd")
+
 @export_category("Hook Controller")
 @export_group("Required Settings")
 
@@ -40,8 +42,6 @@ signal course_time_recorded()
 
 var timer_started: bool = false
 var elapsed_time: float = 0.0
-
-const COURSE_TIMES_PATH: String = "user://course_times.txt"
 
 func _ready() -> void:
 	if hook_raycast == null:
@@ -103,22 +103,8 @@ func _log_course_time() -> bool:
 		push_error("HookController: Could not determine the current scene for the course time.")
 		return false
 
-	var mode: int = (
-		FileAccess.READ_WRITE
-		if FileAccess.file_exists(COURSE_TIMES_PATH)
-		else FileAccess.WRITE
-	)
-	var file: FileAccess = FileAccess.open(COURSE_TIMES_PATH, mode)
-	if file == null:
-		push_error(
-			"HookController: Could not open %s for writing (error %d)." %
-			[COURSE_TIMES_PATH, FileAccess.get_open_error()]
-		)
-		return false
-
-	file.seek_end()
 	var date: Dictionary = Time.get_date_dict_from_system()
-	file.store_line(
+	return CourseTimeStore.append_record(
 		"%s | %s | %.2f seconds" %
 		[
 			"%d/%d/%02d" % [date.month, date.day, date.year % 100],
@@ -126,8 +112,6 @@ func _log_course_time() -> bool:
 			elapsed_time
 		]
 	)
-	file.close()
-	return true
 
 
 func _align_raycast_to_camera() -> void:

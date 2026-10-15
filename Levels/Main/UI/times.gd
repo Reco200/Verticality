@@ -1,8 +1,9 @@
 extends Control
 
+const CourseTimeStore = preload("res://scripts/course_time_store.gd")
+
 signal back_requested
 
-const COURSE_TIMES_PATH: String = "user://course_times.txt"
 const DATA_FONT: FontFile = preload("res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf")
 const DATA_COLOR: Color = Color("#00c0df")
 
@@ -24,19 +25,16 @@ func _load_times() -> void:
 	for child in rows.get_children():
 		child.queue_free()
 
-	if not FileAccess.file_exists(COURSE_TIMES_PATH):
-		status_label.text = "No recorded course times yet."
-		return
-
-	var file := FileAccess.open(COURSE_TIMES_PATH, FileAccess.READ)
-	if file == null:
-		var error := FileAccess.get_open_error()
-		push_error("Times: Could not open %s (error %d)." % [COURSE_TIMES_PATH, error])
+	var result: Dictionary = CourseTimeStore.read_text()
+	if not result.ok:
 		status_label.text = "Could not read recorded course times."
 		return
 
-	var lines := file.get_as_text().split("\n")
-	file.close()
+	if not result.exists:
+		status_label.text = "No recorded course times yet."
+		return
+
+	var lines: PackedStringArray = result.text.split("\n")
 
 	var record_count := 0
 	for index in range(lines.size() - 1, -1, -1):

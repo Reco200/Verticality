@@ -10,6 +10,10 @@ Verticality is a game about grappling to the top of the level by left clicking o
 the given level. The goal is to make it to the highest block, and make it all the way back down to   
 the flat plane that you started on. Try to complete levels as fast as you can, beating your high scores.
 
+Course times are saved on your device. The web version stores them in your browser's local storage, so
+they remain available after you close the page. Browser data is specific to that browser and device,
+and clearing the site's data will remove saved times.
+
 # Bulding from source
 
 ## Prerequisites 
@@ -48,4 +52,3 @@ and then click the ```Install Selected Templates``` button at the top.
 Once the Export Templates install, re-open the Export GUI and configure the game export options however you want.
 Once you configure your export; you can now click export project, and it will output to where ever you told it to. 
 #### Congratulations! The game is now built for your prefered platform.
-
