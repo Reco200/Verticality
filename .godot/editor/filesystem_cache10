@@ -1,8 +1,8 @@
 9cad1ddce9e5a63143ba340c9520626b
-::res://::1792099859
+::res://::1792105134
 CREDITS.txt::TextFile::-1::1791760922::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1792099843::0::1::::<><><>0<>0<><>::
-icon.png::CompressedTexture2D::501269865758229849::1791081345::1791730368::1::::<><><>0<>0<>5b64ab50ec242f90e76ea1b25d8e4156<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.s3tc.ctex<*>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.etc2.ctex::
+export_presets.cfg::TextFile::-1::1792105038::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D::501269865758229849::1792012349::1792105142::1::::<><><>0<>0<>5b64ab50ec242f90e76ea1b25d8e4156<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.s3tc.ctex<*>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.etc2.ctex::
 LICENSE.txt::TextFile::-1::1791138041::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1792099843::0::1::::<><><>0<>0<><>::
 THIRD_PARTY_LICENSES.txt::TextFile::-1::1792011412::0::1::::<><><>0<>0<><>::
@@ -18,11 +18,10 @@ plugin.gd::GDScript::8281194454416576452::1788215975::0::1::::<>EditorPlugin<><>
 hook.tscn::PackedScene::7965145765686123344::1791760650::0::1::::<><><>0<>0<><>::uid://din0nustn1lf3::::res://addons/grappling_hook_3d/src/hook_model.gd
 hook_controller.gd::GDScript::7416305452098745096::1792099843::0::1::::HookController<>Node<><>0<>0<><>::
 hook_model.gd::GDScript::7749151930281427186::1791751455::0::1::::<>Node3D<><>0<>0<><>::
-::res://assets/::1792012547
+::res://assets/::1792105121
+icon.png::CompressedTexture2D::2868641391102473117::1791081345::1792105141::1::::<><><>0<>0<>dafbbaa263ca2a57e6282b483fdd250e<>res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex::
 icon_transparent_bg.png::CompressedTexture2D::2153546220503721907::1792012349::1792012546::1::::<><><>0<>0<>aba8a3542a3ff3283c72c11386622b75<>res://.godot/imported/icon_transparent_bg.png-69ebfa121c5a282707751304b65c3fb0.ctex::
-Verticality_Title_Banner.png::CompressedTexture2D::6552320424494531138::1791942231::1792000503::1::::<><><>0<>0<>687776a7e8a019a7d11003f9a3bac5b6<>res://.godot/imported/Verticality_Title_Banner.png-9d4f04ae2c36c33fca449eab8eeb0745.ctex::
 Verticality_Title_Banner_Background.png::CompressedTexture2D::5759216300155465492::1792012455::1792012547::1::::<><><>0<>0<>ce90a6f43ffc7b10647258f0ac97ec60<>res://.godot/imported/Verticality_Title_Banner_Background.png-90528f913c5280768fe15edb8b2ee4bb.ctex::
-Verticality_Title_Large.png::CompressedTexture2D::4221154464852003996::1791942175::1792000503::1::::<><><>0<>0<>6ab3b2930b991da5b4eaee7c1a4423b9<>res://.godot/imported/Verticality_Title_Large.png-aff3ace02fb3bc99e565db9dad392ce3.ctex::
 Verticality_Title_Large_Background.png::CompressedTexture2D::6026964096064958253::1792012430::1792012547::1::::<><><>0<>0<>226e39489d0515da248d3c78f854e122<>res://.godot/imported/Verticality_Title_Large_Background.png-499fb403b93423fd915f05e4e556bc72.ctex::
 ::res://fonts/::1792010863
 Doto-Regular.ttf::FontFile::8521842259383304787::1787240273::1791067702::1::::<><><>0<>0<>07fa2fbbb30ffdd6f808ac98e55ea9be<>res://.godot/imported/Doto-Regular.ttf-35140c919c4b745e3fe797d0a67ef3b8.fontdata::
@@ -108,8 +107,8 @@ Level 7.tscn::PackedScene::103726086690329429::1792099843::0::1::::<><><>0<>0<><
 Level 8.tscn::PackedScene::8333989571053377706::1792099843::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>res://Levels/Main/UI/high_score.tscn<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd
 L_Main.gd::GDScript::1861474550355443990::1791309099::0::1::::<>Node3D<><>0<>0<><>::
 L_Main.tscn::PackedScene::9098116206568334096::1792099843::0::1::::<><><>0<>0<><>::uid://1ryhjik5vack::::res://Levels/Main/L_Main.gd<>uid://bdupkh0grwy27::::res://Player/Player.tscn<>uid://dktwb344bc3wu::::res://scripts/grapple_halfway.gd<>uid://b6vrajsej73yf::::res://scripts/grapple_finish.gd<>uid://cwiw4ulqhp68g::::res://Levels/Main/UI/pause.tscn<>uid://dnf4gjtaakise::::res://textures/cool texture.png<>res://Levels/Main/UI/high_score.tscn
-::res://Levels/Main/UI/::1792099843
-control.tscn::PackedScene::5022973694340173729::1792099843::0::1::::<><><>0<>0<><>::uid://dw5bwwpc4xns3::::res://Levels/Main/UI/theme.tres<>uid://cf65vew26nbca::::res://fonts/Doto/static/Doto-Bold.ttf<>uid://v4e8po5651e6::::res://Levels/Main/UI/Buttons/button.tscn<>uid://cxt0dns1wx4uc::::res://Levels/Main/UI/Buttons/levelselect.gd<>uid://w6nasfwhloy5::::res://Levels/Main/UI/Buttons/exit.gd<>uid://cpbo80or0fo2e::::res://Levels/Main/UI/Buttons/credits.gd<>uid://qepxcojefqkh::::res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf
+::res://Levels/Main/UI/::1792099928
+control.tscn::PackedScene::5022973694340173729::1792099928::0::1::::<><><>0<>0<><>::uid://dw5bwwpc4xns3::::res://Levels/Main/UI/theme.tres<>uid://cf65vew26nbca::::res://fonts/Doto/static/Doto-Bold.ttf<>uid://v4e8po5651e6::::res://Levels/Main/UI/Buttons/button.tscn<>uid://cxt0dns1wx4uc::::res://Levels/Main/UI/Buttons/levelselect.gd<>uid://w6nasfwhloy5::::res://Levels/Main/UI/Buttons/exit.gd<>uid://cpbo80or0fo2e::::res://Levels/Main/UI/Buttons/credits.gd<>uid://qepxcojefqkh::::res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf
 credits.tscn::PackedScene::4021301979784001057::1792010338::0::1::::<><><>0<>0<><>::uid://dw5bwwpc4xns3::::res://Levels/Main/UI/theme.tres<>uid://cf65vew26nbca::::res://fonts/Doto/static/Doto-Bold.ttf<>uid://v4e8po5651e6::::res://Levels/Main/UI/Buttons/button.tscn<>uid://qepxcojefqkh::::res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf<>uid://brlxodupe1mkl::::res://Levels/Main/UI/Buttons/homebutton.gd
 high_score.gd::GDScript::3226329201121617104::1792099843::0::1::::<>CanvasLayer<><>0<>0<><>::
 high_score.tscn::PackedScene::-1::1790993623::0::1::::<><><>0<>0<><>::res://Levels/Main/UI/high_score.gd<>uid://yw5l42eiyqem::::res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf

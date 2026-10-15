@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1e02dx1m8tai"
-path="res://.godot/imported/Verticality_Title_Large.png-aff3ace02fb3bc99e565db9dad392ce3.ctex"
+uid="uid://bg4uds6dxda1b"
+path="res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Verticality_Title_Large.png"
-dest_files=["res://.godot/imported/Verticality_Title_Large.png-aff3ace02fb3bc99e565db9dad392ce3.ctex"]
+source_file="res://assets/icon.png"
+dest_files=["res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex"]
 
 [params]
 
