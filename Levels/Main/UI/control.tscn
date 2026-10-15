@@ -111,7 +111,8 @@ theme_override_font_sizes/font_size = 21
 text = "Verticality - Copyright (C) 2026 - Elliot Beardsley
 This program comes with ABSOLUTELY NO WARRANTY
 This is free software, and you are welcome to redistribute it
-under certain conditions; see license and third party licenses for details."
+under certain conditions; see license and third party licenses for details.
+"
 autowrap_mode = 3
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" to="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" method="_on_pressed"]
