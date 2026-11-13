@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 	if launch_action_name.is_empty():
 		return
 
-	# Only launch/retract when the grapple button is pressed.
+
 	if Input.is_action_just_pressed(launch_action_name):
 		hook_launched.emit()
 

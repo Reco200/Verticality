@@ -10,6 +10,9 @@ Verticality is a game about grappling to the top of the level by left clicking o
 the given level. The goal is to make it to the highest block, and make it all the way back down to   
 the flat plane that you started on. Try to complete levels as fast as you can, beating your high scores.
 
+On touchscreen devices, use the left joystick to move, the right joystick to look, and the on-screen
+buttons to grapple, retract, jump, sprint, or pause.
+
 # Bulding from source
 
 ## Prerequisites 
@@ -48,4 +51,3 @@ and then click the ```Install Selected Templates``` button at the top.
 Once the Export Templates install, re-open the Export GUI and configure the game export options however you want.
 Once you configure your export; you can now click export project, and it will output to where ever you told it to. 
 #### Congratulations! The game is now built for your prefered platform.
-

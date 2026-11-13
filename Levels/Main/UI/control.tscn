@@ -14,10 +14,6 @@ content_margin_top = 32.0
 content_margin_right = 36.0
 content_margin_bottom = 32.0
 bg_color = Color(0.03529412, 0.078431375, 0.16078432, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
 border_color = Color(0, 0.7529412, 0.8745098, 1)
 
 [sub_resource type="Theme" id="Theme_1ouw8"]
@@ -96,14 +92,17 @@ text = "Quit"
 script = ExtResource("4_nulli")
 
 [node name="Title" type="Label" parent="." unique_id=172755624]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -145.0
-offset_right = -24.0
-offset_bottom = -20.0
+offset_left = 31.0
+offset_top = -154.0
+offset_right = -17.0
+offset_bottom = 6403.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("7_1obja")
@@ -113,6 +112,7 @@ This program comes with ABSOLUTELY NO WARRANTY
 This is free software, and you are welcome to redistribute it
 under certain conditions; see license and third party licenses for details.
 "
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" to="PanelContainer/VBoxContainer/LEVEL SELECT/level selection" method="_on_pressed"]
