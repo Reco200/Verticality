@@ -27,7 +27,7 @@ func _input(event: InputEvent) -> void:
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
 	var joystick_axis := Input.get_vector(&"look_left", &"look_right",
-			&"look_down", &"look_up")
+			&"look_up", &"look_down")
 	
 	if joystick_axis != Vector2.ZERO:
 		mouse_axis = joystick_axis * 1000.0 * delta

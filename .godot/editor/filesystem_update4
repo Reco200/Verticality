@@ -1,6 +1,2 @@
 res://Levels/Main/UI/control.tscn
-res://Levels/Main/UI/level select.tscn
-res://Levels/Main/UI/credits.tscn
-res://addons/grappling_hook_3d/src/hook_controller.gd
-res://Player/Player.tscn
-res://Player/Sprint.gd
+res://Player/Head.gd
