@@ -10,8 +10,8 @@ Verticality is a game about grappling to the top of the level by left clicking o
 the given level. The goal is to make it to the highest block, and make it all the way back down to   
 the flat plane that you started on. Try to complete levels as fast as you can, beating your high scores.
 
-On touchscreen devices, use the left joystick to move, the right joystick to look, and the on-screen
-buttons to grapple, retract, jump, sprint, or pause.
+On touchscreen devices, drag the left side to move and the right side to look. Tap the screen to
+toggle the grappling hook; use the larger on-screen buttons to jump or pause.
 
 # Bulding from source
 

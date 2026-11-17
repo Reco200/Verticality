@@ -98,7 +98,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 31.0
-offset_top = -154.0
+offset_top = -120.0
 offset_right = -17.0
 offset_bottom = 6403.0
 grow_horizontal = 2
@@ -106,7 +106,7 @@ grow_vertical = 0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0.7529412, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("7_1obja")
-theme_override_font_sizes/font_size = 21
+theme_override_font_sizes/font_size = 17
 text = "Verticality - Copyright (C) 2026 - Elliot Beardsley 
 This program comes with ABSOLUTELY NO WARRANTY
 This is free software, and you are welcome to redistribute it

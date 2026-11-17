@@ -21,6 +21,14 @@ boot_splash/show_image=false
 boot_splash/image="uid://d3b5ocxebr7nt"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/viewport_width=1152
+window/size/viewport_height=648
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale=1.1
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/grappling_hook_3d/plugin.cfg")

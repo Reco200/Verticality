@@ -1,2 +1,4 @@
-res://Levels/Main/UI/control.tscn
+res://Player/TouchControls.gd
 res://Player/Head.gd
+res://Levels/Main/UI/control.tscn
+res://Levels/Main/UI/Buttons/button.tscn
