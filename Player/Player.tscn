@@ -17,7 +17,7 @@ script = ExtResource("4_ddoul")
 launch_action_name = "grapple"
 retract_action_name = "grapple_retract"
 pull_speed = 7.005
-hook_range = 150.0
+hook_range = 200.0
 
 [node name="TouchControls" parent="." index="3" unique_id=1226507537 instance=ExtResource("5_touch_controls")]
 

@@ -8,11 +8,45 @@ const DATA_COLOR: Color = Color("#00c0df")
 
 @onready var rows: GridContainer = $PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Rows
 @onready var status_label: Label = $PanelContainer/MarginContainer/VBoxContainer/Status
+@onready var scroll_container: ScrollContainer = (
+	$PanelContainer/MarginContainer/VBoxContainer/ScrollContainer
+)
+
+var _scroll_touch_id := -1
+var _last_scroll_touch_y := 0.0
 
 
 func _ready() -> void:
+	set_process_input(true)
 	if is_visible_in_tree():
 		_load_times()
+
+
+func _input(event: InputEvent) -> void:
+	if not is_visible_in_tree():
+		return
+
+	if event is InputEventScreenTouch:
+		var touch_event := scroll_container.make_input_local(event) as InputEventScreenTouch
+		var handled_touch := false
+		if touch_event.pressed:
+			if Rect2(Vector2.ZERO, scroll_container.size).has_point(touch_event.position):
+				_scroll_touch_id = touch_event.index
+				_last_scroll_touch_y = touch_event.position.y
+				handled_touch = true
+		elif touch_event.index == _scroll_touch_id:
+			_scroll_touch_id = -1
+			handled_touch = true
+		if handled_touch:
+			get_viewport().set_input_as_handled()
+	elif event is InputEventScreenDrag:
+		var drag_event := scroll_container.make_input_local(event) as InputEventScreenDrag
+		if drag_event.index != _scroll_touch_id:
+			return
+
+		scroll_container.scroll_vertical += roundi(_last_scroll_touch_y - drag_event.position.y)
+		_last_scroll_touch_y = drag_event.position.y
+		get_viewport().set_input_as_handled()
 
 
 func show_times() -> void:

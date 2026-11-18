@@ -1,3 +1,5 @@
 res://Player/Head.gd
 res://Player/TouchControls.gd
 res://addons/grappling_hook_3d/src/hook_controller.gd
+res://Player/Player.tscn
+res://Levels/Main/UI/times.gd
