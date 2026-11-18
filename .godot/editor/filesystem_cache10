@@ -1,7 +1,7 @@
 9cad1ddce9e5a63143ba340c9520626b
-::res://::1794877165
+::res://::1794962164
 CREDITS.txt::TextFile::-1::1791760922::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1794877165::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1794962164::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D::501269865758229849::1792012349::1792105142::1::::<><><>0<>0<>5b64ab50ec242f90e76ea1b25d8e4156<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.s3tc.ctex<*>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.etc2.ctex::
 LICENSE.txt::TextFile::-1::1791138041::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1794871849::0::1::::<><><>0<>0<><>::
@@ -18,7 +18,8 @@ plugin.gd::GDScript::8281194454416576452::1788215975::0::1::::<>EditorPlugin<><>
 hook.tscn::PackedScene::7965145765686123344::1791760650::0::1::::<><><>0<>0<><>::uid://din0nustn1lf3::::res://addons/grappling_hook_3d/src/hook_model.gd
 hook_controller.gd::GDScript::7416305452098745096::1794532343::0::1::::HookController<>Node<><>0<>0<><>::
 hook_model.gd::GDScript::7749151930281427186::1791751455::0::1::::<>Node3D<><>0<>0<><>::
-::res://assets/::1794877150
+::res://assets/::1794962454
+icon (android mk 2).png::CompressedTexture2D::5053411453608650607::1794962454::1794962460::1::::<><><>0<>0<>c823d1c9e12e0993340914cf29440e32<>res://.godot/imported/icon (android mk 2).png-cb83c1cd9fa08cfc134c5dcd53ea4e62.ctex::
 icon (android).png::CompressedTexture2D::4138373672087987709::1794877218::1794877224::1::::<><><>0<>0<>b1215274da76b8b653ecee2730b9c02e<>res://.godot/imported/icon (android).png-68823d7f5e5815bc108ef376aedcba0e.ctex::
 icon.png::CompressedTexture2D::2868641391102473117::1792105164::1793928811::1::::<><><>0<>0<>dafbbaa263ca2a57e6282b483fdd250e<>res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex::
 icon_transparent_bg.png::CompressedTexture2D::2153546220503721907::1792012349::1792012546::1::::<><><>0<>0<>aba8a3542a3ff3283c72c11386622b75<>res://.godot/imported/icon_transparent_bg.png-69ebfa121c5a282707751304b65c3fb0.ctex::
@@ -138,13 +139,13 @@ level8.gd::GDScript::2145446987253323212::1791743378::0::1::::<>Button<><>0<>0<>
 levelselect.gd::GDScript::6427931942410648950::1790978106::0::1::::<>Button<><>0<>0<><>::
 Pause menu buttons.tres::Theme::7072419387230359327::1790992096::0::1::::<><><>0<>0<><>::uid://cyuwrxusjc4g2::::res://Levels/Main/UI/style box.tres<>uid://yw5l42eiyqem::::res://fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf
 ::res://Player/::1794532343
-Head.gd::GDScript::3697244973809590691::1794871849::0::1::::<>Node3D<><>0<>0<><>::
+Head.gd::GDScript::3697244973809590691::1794962018::0::1::::<>Node3D<><>0<>0<><>::
 Head.tscn::PackedScene::4709880396038694991::1788219965::0::1::::<><><>0<>0<><>::uid://bsw8c4y6ylwl4::::res://Player/Head.gd
 MovementController.gd::GDScript::1076930493692869613::1790724331::0::1::::MovementController<>CharacterBody3D<><>0<>0<><>::
 MovementController.tscn::PackedScene::806583487677930933::1787973437::0::1::::<><><>0<>0<><>::res://Player/MovementController.gd
 Player.tscn::PackedScene::2639203789098724694::1794532343::0::1::::<><><>0<>0<><>::uid://lqyku5wn2wo0::::res://Player/MovementController.tscn<>uid://b8drbos167vf8::::res://Player/Head.tscn<>uid://ddwrp5fgy56me::::res://addons/grappling_hook_3d/src/hook_controller.gd<>res://Player/TouchControls.tscn
 Sprint.gd::GDScript::8664723745929392199::1794532343::0::1::::<>RefCounted<><>0<>0<><>::
-TouchControls.gd::GDScript::7941864102561487899::1794872544::0::1::::<>Control<><>0<>0<><>::
+TouchControls.gd::GDScript::7941864102561487899::1794962004::0::1::::<>Control<><>0<>0<><>::
 TouchControls.tscn::PackedScene::-1::1794532343::0::1::::<><><>0<>0<><>::res://Player/TouchControls.gd
 ::res://scripts/::1792110043
 grapple_finish.gd::GDScript::4606659458896080565::1790725053::0::1::::<>NoGrapple<><>0<>0<><>::

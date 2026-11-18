@@ -13,6 +13,8 @@ const LOOK_ACTIONS: Array[StringName] = [
 	&"look_right",
 ]
 const TAP_DISTANCE := 20.0
+const LOOK_DEADZONE := 0.06
+const LOOK_RESPONSE_EXPONENT := 1.5
 const BUTTON_FONT: FontFile = preload("res://fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf")
 const BUTTON_TEXT_COLOR := Color("#00c0df")
 
@@ -151,6 +153,16 @@ func _touch_ended(touch_id: int) -> void:
 
 func _update_joystick(position: Vector2, is_look: bool, center: Vector2) -> void:
 	var value := (position - center).limit_length(_joystick_radius()) / _joystick_radius()
+	if is_look:
+		var magnitude := value.length()
+		if magnitude <= LOOK_DEADZONE:
+			value = Vector2.ZERO
+		else:
+			var adjusted_magnitude := pow(
+				(magnitude - LOOK_DEADZONE) / (1.0 - LOOK_DEADZONE),
+				LOOK_RESPONSE_EXPONENT
+			)
+			value = value.normalized() * adjusted_magnitude
 	_set_joystick_actions(value, is_look)
 	queue_redraw()
 

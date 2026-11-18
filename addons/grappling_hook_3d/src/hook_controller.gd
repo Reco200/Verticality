@@ -181,6 +181,8 @@ func _launch_hook() -> void:
 
 	is_hook_launched = true
 	hook_attached.emit(body)
+	if DisplayServer.is_touchscreen_available():
+		Input.vibrate_handheld(50)
 
 	if not timer_started:
 		timer_started = true

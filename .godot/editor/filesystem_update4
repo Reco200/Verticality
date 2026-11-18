@@ -1,4 +1,3 @@
-res://Player/TouchControls.gd
 res://Player/Head.gd
-res://Levels/Main/UI/control.tscn
-res://Levels/Main/UI/Buttons/button.tscn
+res://Player/TouchControls.gd
+res://addons/grappling_hook_3d/src/hook_controller.gd
