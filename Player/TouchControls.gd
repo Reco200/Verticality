@@ -144,7 +144,7 @@ func _touch_ended(touch_id: int) -> void:
 			_set_joystick_actions(Vector2.ZERO, true)
 		if not _is_action_held(touch.action):
 			_emit_action(touch.action, 0.0)
-	if is_tap:
+	if is_tap and touch.kind != "button":
 		_emit_action(&"grapple", 1.0)
 		_emit_action(&"grapple", 0.0)
 	queue_redraw()
@@ -187,7 +187,7 @@ func _button_layout() -> Array[Dictionary]:
 		{
 			"action": &"jump",
 			"label": "JUMP",
-			"center": _anchored_point(0.24, 0.74, jump_radius),
+			"center": _anchored_point(0.78, 0.78, jump_radius),
 			"radius": jump_radius,
 		},
 		{
